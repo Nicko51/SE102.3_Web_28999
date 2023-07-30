@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Hello</title>
+        <script>
+            function x()
+            {
+                var input= window.confirm("Are you sure you want to visit Google?");
+                if(input)//we dont neet to put == true
+                {
+                    window.location.href= "https://www.google.lk/";
+                }
+                else
+                {
+                    window.alert("You decided to stay");
+                }
+            }
+        </script>
+    </head>
+<body>
+    <button onclick="x()">Google</button>                   
+</body>
+</html>

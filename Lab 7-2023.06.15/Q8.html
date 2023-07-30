@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>get birth year</title>
+</head>
+<body>
+    <h2>Enter your NIC number</h2>
+    <input type="text" id="numbersInput">
+    <button onclick="BirthYear()">Submit</button>
+    <h2>Your Birth year</h2>
+    <div id="output"></div>
+    <script>
+        function BirthYear() {
+            const inputText = document.getElementById("numbersInput").value;
+            const BirthYear = inputText.slice(0, 4);
+            document.getElementById("output").innerText = BirthYear;
+        }
+    </script>
+</body>
+</html>
