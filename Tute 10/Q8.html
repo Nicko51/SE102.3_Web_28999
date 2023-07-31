@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Year of Birth from NIC</title>
+</head>
+<body>
+  <script>
+    function extractYearOfBirth() {
+      // Get the NIC number from the user through a prompt box
+      const nicInput = prompt("Enter the NIC number (e.g., 123456789V):");
+
+      // Check if the input is null or empty
+      if (!nicInput) {
+        alert("Invalid input. Please enter a valid NIC number.");
+        return;
+      }
+
+      // Extract the year of birth from the NIC using String functions
+      // Assuming the format of the NIC is "123456789V" where the last character is the gender indicator
+      const yearOfBirth = "19" + nicInput.slice(0, 2);
+
+      // Check if the extracted year is a valid number
+      const yearOfBirthNumber = parseInt(yearOfBirth);
+      if (isNaN(yearOfBirthNumber) || yearOfBirthNumber <= 1900 || yearOfBirthNumber > new Date().getFullYear()) {
+        alert("Invalid NIC number. Please enter a valid NIC number.");
+        return;
+      }
+
+      // Display the year of birth
+      alert(`The year of birth is: ${yearOfBirth}`);
+    }
+  </script>
+
+  <h1>Year of Birth from NIC</h1>
+  <button onclick="extractYearOfBirth()">Extract Year of Birth</button>
+</body>
+</html>
